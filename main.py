@@ -6,7 +6,7 @@ import json
 import sys
 import traceback
 from ad import Ads
-from Updater import BareBonesUpdater
+from updater import BareBonesUpdater
 
 cex, mode= sys.argv[1:3]
 api = None
