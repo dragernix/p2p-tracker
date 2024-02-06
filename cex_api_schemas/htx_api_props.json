@@ -1,0 +1,142 @@
+# adv
+{
+    "id": 705287,
+    "uid": 266538154,
+    "userName": "Gabbywfx",
+    "merchantLevel": 2,
+    "merchantTags": null,
+    "coinId": 2,
+    "currency": 3,
+    "tradeType": 1,
+    "blockType": 1,
+    "payMethod": "21",
+    "payMethods": [
+        {
+            "payMethodId": 21,
+            "name": "Cash Deposit",
+            "color": null,
+            "isRecommend": null
+        }
+    ],
+    "payTerm": 15,
+    "payName": "[{\"bankType\":21,\"id\":15355071}]",
+    "minTradeLimit": "500.00",
+    "maxTradeLimit": "19407.00",
+    "price": "1.36",
+    "tradeCount": "14270.082993",
+    "isOnline": true,
+    "isFollowed": false,
+    "tradeMonthTimes": 0,
+    "orderCompleteRate": "0",
+    "takerAcceptOrder": 0,
+    "takerAcceptAmount": "0",
+    "takerLimit": 0,
+    "gmtSort": 1701531212000,
+    "isCopyBlock": false,
+    "thumbUp": 0,
+    "seaViewRoom": null,
+    "isTrade": false
+},
+
+user_advList
+{
+    "code": 200,
+    "message": "Success",
+    "totalCount": 1,
+    "pageSize": 100,
+    "totalPage": 1,
+    "currPage": 1,
+    "data": [
+        {
+            "id": 952391,
+            "uid": 472994019,
+            "userName": "AAAtrades",
+            "merchantLevel": 0,
+            "merchantTags": [],
+            "coinId": 2,
+            "currency": 3,
+            "tradeType": 1,
+            "blockType": 1,
+            "payMethod": "1,7,86",
+            "payMethods": [
+                {
+                    "payMethodId": 1,
+                    "name": "Bank Transfer",
+                    "color": "#F0B90B",
+                    "isRecommend": null
+                },
+                {
+                    "payMethodId": 7,
+                    "name": "PayNow",
+                    "color": "#7C1A78",
+                    "isRecommend": null
+                },
+                {
+                    "payMethodId": 86,
+                    "name": "Google Pay (GPay)",
+                    "color": "#4285F4",
+                    "isRecommend": null
+                }
+            ],
+            "payTerm": 30,
+            "payName": "[{\"bankName\":\"Trust Bank Singapore Limited\",\"bankType\":1,\"id\":15588758},{\"bankType\":7,\"id\":15588746},{\"bankType\":86,\"id\":15588748}]",
+            "minTradeLimit": "1000.00",
+            "maxTradeLimit": "12000.00",
+            "price": "1.36",
+            "tradeCount": "9000.000000",
+            "isOnline": true,
+            "isFollowed": null,
+            "tradeMonthTimes": 0,
+            "orderCompleteRate": "0",
+            "takerAcceptOrder": 0,
+            "takerAcceptAmount": "0",
+            "takerLimit": 0,
+            "gmtSort": 1701706918000,
+            "isCopyBlock": false,
+            "thumbUp": null,
+            "seaViewRoom": 0,
+            "isTrade": null
+        }
+    ],
+    "success": true
+}
+
+
+# userInfo
+{
+    "userName": "AAAtrades",
+    "isPhoneBind": true,
+    "isMailBind": true,
+    "realBind": 2,
+    "isMerchant": false,
+    "merchantLevel": 0,
+    "tradeLevel": 0,
+    "marginCoinId": 0,
+    "marginAmount": 0,
+    "tradeCount": 55,
+    "releaseTime": 229,
+    "appealTimes": 0,
+    "appealWinTimes": 0,
+    "appealMonthTimes": 0,
+    "appealMonthWinTimes": 0,
+    "tradeMonthCount": 55,
+    "tradeMonthCountBuy": 2,
+    "tradeMonthCountSell": 53,
+    "relationType": 0,
+    "isFollowed": false,
+    "orderCompleteRate": 100,
+    "gmtCreate": "2023-11-10 23:44:03",
+    "gmtRegister": 1699631042000,
+    "country": 103,
+    "tradeCountSell": 53,
+    "tradeCountBuy": 2,
+    "releaseTimeAvg": "4.32",
+    "buyCompleteRate": "100.00",
+    "buyCancelTimeAvg": "0.00",
+    "monthPayTimeAvg": "6.50",
+    "appealRate": null,
+    "monthReleaseTimeAvg": "4.32",
+    "areaType": 1,
+    "thumbUp": 0,
+    "merchantTags": []
+    }

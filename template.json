@@ -1,0 +1,11 @@
+{
+  "TELE_TOKEN": "1111111111:ksjndvksladnvkajnsvkjnsdvaruia",
+  "TELE_USERS": [
+    1111111111,
+    2222222222
+  ],
+  "WATCHLIST_FILENAME": "watchlist.txt",
+  "ADVERTISERS_FILENAME": "advertisers.txt",
+  "ADVERTISERS_LOGGING": true,
+  "TIMEOUT": 30
+}

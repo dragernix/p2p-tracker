@@ -1,0 +1,18 @@
+AdvList:
+-adv-
+"advNo", "tradeType", "asset", "fiatUnit", "advStatus", "priceType", "priceFloatingRatio", "rateFloatingRatio", "currencyRate", "price", "initAmount", "surplusAmount", "amountAfterEditing", "maxSingleTransAmount", "minSingleTransAmount", "remarks", "createTime", "advUpdateTime", "dynamicMaxSingleTransAmount", "minSingleTransQuantity", "maxSingleTransQuantity", "dynamicMaxSingleTransQuantity", "tradableQuantity", 
+
+-advertiser-
+"userNo", "nickName"
+
+
+User:
+-userDetailVo-
+"userNo", "nickName", "userStatsRet", "onlineStatus", "lastActiveTime", "activeTimeInSecond", 
+
+- userStatsRet
+{'registerDays': 1270, 'firstOrderDays': 307, 'payMethodCount': None, 'avgReleaseTimeOfLatest30day': 439.0, 'avgPayTimeOfLatest30day': 0.0, 'finishRateLatest30day': 1.0, 'completedOrderNumOfLatest30day': 1, 'completedBuyOrderNumOfLatest30day': 0, 'completedSellOrderNumOfLatest30day': 1, 'completedOrderTotalBtcAmountOfLatest30day': 0.00196651, 'completedOrderNum': 111, 'completedBuyOrderNum': 9, 'completedSellOrderNum': 102, 'completedBuyOrderTotalBtcAmount': 1.35316547, 'completedSellOrderTotalBtcAmount': 24.71347792, 'completedOrderTotalBtcAmount': 26.06664339, 'counterpartyCount': 78}
+
+-sellList-
+-buyList-
+"advNo", "tradeType", "asset", "fiatUnit", "advStatus", "priceType", "priceFloatingRatio", "rateFloatingRatio", "currencyRate", "price", "initAmount", "surplusAmount", "amountAfterEditing", "maxSingleTransAmount", "minSingleTransAmount", "remarks", "createTime", "advUpdateTime", "dynamicMaxSingleTransAmount", "minSingleTransQuantity", "maxSingleTransQuantity", "dynamicMaxSingleTransQuantity", "tradableQuantity", 
