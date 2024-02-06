@@ -16,12 +16,12 @@ if cex == "htx":
   with open("htx_config.json") as f:
     env = json.load(f)
   api = cex_api.HtxAPI()
-  from User import HtxUser as User
+  from user import HtxUser as User
 else:
   with open("binance_config.json") as f:
     env = json.load(f)
   api = cex_api.BinanceAPI()
-  from User import BinanceUser as User
+  from user import BinanceUser as User
 
     
 ADVERTISERS_FILENAME = env["ADVERTISERS_FILENAME"]
