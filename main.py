@@ -6,7 +6,7 @@ import json
 import sys
 import traceback
 from ad import Ads
-from updater import BareBonesUpdater
+from updater import SummarisedUpdater, BareBonesUpdater
 
 cex, mode= sys.argv[1:3]
 api = None
@@ -58,6 +58,7 @@ def main(logger, users, updater):
           except:
             logger.error("ERROR getting %s data! id: %s", user.name, user.id)
             new_data = user.data
+          print("{: <50}".format(f"Checking {user.name}... "), end='\r')
           updater.update_user(user, new_data)
           user.data = new_data
 
@@ -100,7 +101,7 @@ if __name__ == "__main__":
   if mode == 1:
     updater = BareBonesUpdater(logger)
   else:
-    updater = BareBonesUpdater(logger)
+    updater = SummarisedUpdater(logger)
   
   main(logger, users, updater)
 
