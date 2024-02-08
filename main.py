@@ -98,9 +98,9 @@ if __name__ == "__main__":
   handler.setFormatter(logging.Formatter('%(message)s'))
   
   # choose mode
-  if mode == 1:
+  if mode == '1':
     updater = BareBonesUpdater(logger)
-  else:
+  elif mode == '2':
     updater = SummarisedUpdater(logger)
   
   main(logger, users, updater)

@@ -158,14 +158,22 @@ class HtxAPI:
   def get_user(self, user_id):
     user = self._get_user(user_id)
     buy_list, sell_list = self._get_user_adlist(user_id)
+    buy_dict, sell_dict = {}, {}
     for ad in buy_list + sell_list:
+      if self.currency_list.get(ad["currency"]) != "SGD":
+        continue
       ad["tradeType"] = self.trade_type_list[ad["tradeType"]]
       ad["coinId"] = self.coin_list.get(ad["coinId"]) if self.coin_list.get(ad["coinId"]) else ad["coinId"]
       ad["currency"] = self.currency_list.get(ad["currency"]) if self.currency_list.get(ad["currency"]) else ad["currency"]
       ad["id"] = str(ad["id"])
       ad["uid"] = str(ad["uid"])
-    buy_dict = {ad["id"]: ad for ad in buy_list}
-    sell_dict = {ad["id"]: ad for ad in sell_list}
+      if ad["tradeType"] == "SELL":
+        sell_dict[ad["id"]] = ad
+      else:
+        buy_dict[ad["id"]] = ad
+      
+    # buy_dict = {ad["id"]: ad for ad in buy_list}
+    # sell_dict = {ad["id"]: ad for ad in sell_list}
     user["buy_list"] = buy_dict
     user["sell_list"] = sell_dict
     return user

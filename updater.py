@@ -52,10 +52,10 @@ class BareBonesUpdater(Updater):
     buy_decreased, sell_decreased = user.check_ads_decreased(new_data)
     
     for listed in buy_listed + sell_listed:
-      self.logger.info(f"{listed['name']} LISTED {listed['tradeType']} order of {listed['quantity']} {listed['asset']} for {listed['price']} {listed['currency']}")
+      self.logger.info(f"{listed['name']} LISTED {listed['tradeType']} order of {listed['change']} {listed['asset']} for {listed['price']} {listed['currency']}")
 
     for delisted in buy_delisted + sell_delisted:
-      self.logger.info(f"{delisted['name']} DELISTED {delisted['tradeType']} order of {delisted['quantity']} {delisted['asset']} for {delisted['price']} {delisted['currency']}")
+      self.logger.info(f"{delisted['name']} DELISTED {delisted['tradeType']} order of {delisted['change']} {delisted['asset']} for {delisted['price']} {delisted['currency']}")
 
     for increased in buy_increased + sell_increased:
       self.logger.info(f"{increased['name']} ADDED {increased['change']} {increased['asset']} to {increased['tradeType']} order of {increased['price']} {increased['currency']}. New Total: {increased['quantity']} {increased['asset']}")
@@ -86,14 +86,14 @@ class SummarisedUpdater(Updater):
     for i in range(buys):
       ad = self.buy_stacks[user.id].pop()
       if ad:
-        print(ad)
-        self.logger.info(f"{ad['name']} CONFIRMED {ad['tradeType']} {ad['quantity']} {ad['asset']} FOR {ad['price']} {ad['currency']}")
+        # print(ad)
+        self.logger.info(f"{ad['name']} CONFIRMED {ad['tradeType']} {ad['change']} {ad['asset']} FOR {ad['price']} {ad['currency']}")
     
     for i in range(sells):
       ad = self.sell_stacks[user.id].pop()
       if ad:
-        print(ad)
-        self.logger.info(f"{ad['name']} CONFIRMED {ad['tradeType']} {ad['quantity']} {ad['asset']} FOR {ad['price']} {ad['currency']}")
+        # print(ad)
+        self.logger.info(f"{ad['name']} CONFIRMED {ad['tradeType']} {ad['change']} {ad['asset']} FOR {ad['price']} {ad['currency']}")
     
     
   def log_user_changes(self, user, new_data):
@@ -106,10 +106,10 @@ class SummarisedUpdater(Updater):
     
     if ttl_buy or mth_buy:
       buys = max(ttl_buy, mth_buy)
-      print(f"{user.name} has {str(buys)} new buys")
+      # print(f"{user.name} has {str(buys)} new buys")
     if ttl_sell or mth_sell:
       sells = max(ttl_sell, mth_sell)
-      print(f"{user.name} has {str(sells)} new sells")
+      # print(f"{user.name} has {str(sells)} new sells")
       
     
     if cp:
@@ -128,17 +128,7 @@ class SummarisedUpdater(Updater):
     
     for bought in buy_delisted + buy_decreased:
       self.buy_stacks[user.id].add(bought)
-    # for listed in buy_listed + sell_listed:
-    #   self.logger.info(f"{listed['name']} LISTED {listed['tradeType']} order of {listed['quantity']} {listed['asset']} for {listed['price']} {listed['currency']}")
 
-    # for delisted in buy_delisted + sell_delisted:
-    #   self.logger.info(f"{delisted['name']} DELISTED {delisted['tradeType']} order of {delisted['quantity']} {delisted['asset']} for {delisted['price']} {delisted['currency']}")
-
-    # for increased in buy_increased + sell_increased:
-    #   self.logger.info(f"{increased['name']} ADDED {increased['change']} {increased['asset']} to {increased['tradeType']} order of {increased['price']} {increased['currency']}. New Total: {increased['quantity']} {increased['asset']}")
-
-    # for decreased in buy_decreased + sell_decreased:
-    #   self.logger.info(f"{decreased['name']} DEPLETED {decreased['change']} {decreased['asset']} to {decreased['tradeType']} order of {decreased['price']} {decreased['currency']}. New Total: {decreased['quantity']} {decreased['asset']}")
       
 
 class stack:

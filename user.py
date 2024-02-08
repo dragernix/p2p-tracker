@@ -112,7 +112,7 @@ class BinanceUser(User):
                             "asset": new_buy[ad_no]["asset"],
                             "currency": new_buy[ad_no]["fiatUnit"],
                             "price": new_buy[ad_no]["price"],
-                            "quantity": new_buy[ad_no]["tradableQuantity"],
+                            "change": new_buy[ad_no]["tradableQuantity"],
                             "tradeType": new_buy[ad_no]["tradeType"]
                             })
     
@@ -123,7 +123,7 @@ class BinanceUser(User):
                             "asset": new_sell[ad_no]["asset"],
                             "currency": new_sell[ad_no]["fiatUnit"],
                             "price": new_sell[ad_no]["price"],
-                            "quantity": new_sell[ad_no]["tradableQuantity"],
+                            "change": new_sell[ad_no]["tradableQuantity"],
                             "tradeType": new_sell[ad_no]["tradeType"]
                             })
 
@@ -145,7 +145,7 @@ class BinanceUser(User):
                             "asset": self.buy_list[ad_no]["asset"],
                             "currency": self.buy_list[ad_no]["fiatUnit"],
                             "price": self.buy_list[ad_no]["price"],
-                            "quantity": self.buy_list[ad_no]["tradableQuantity"],
+                            "change": self.buy_list[ad_no]["tradableQuantity"],
                             "tradeType": self.buy_list[ad_no]["tradeType"]
                             })
     
@@ -156,7 +156,7 @@ class BinanceUser(User):
                             "asset": self.sell_list[ad_no]["asset"],
                             "currency": self.sell_list[ad_no]["fiatUnit"],
                             "price": self.sell_list[ad_no]["price"],
-                            "quantity": self.sell_list[ad_no]["tradableQuantity"],
+                            "change": self.sell_list[ad_no]["tradableQuantity"],
                             "tradeType": self.sell_list[ad_no]["tradeType"]
                             })
     
@@ -310,7 +310,7 @@ class HtxUser(User):
                             "asset": new_buy[ad_no]["coinId"],
                             "currency": new_buy[ad_no]["currency"],
                             "price": new_buy[ad_no]["price"],
-                            "quantity": new_buy[ad_no]["tradeCount"],
+                            "change": new_buy[ad_no]["tradeCount"],
                             "tradeType": new_buy[ad_no]["tradeType"]
                             })
     
@@ -321,7 +321,7 @@ class HtxUser(User):
                             "asset": new_sell[ad_no]["coinId"],
                             "currency": new_sell[ad_no]["currency"],
                             "price": new_sell[ad_no]["price"],
-                            "quantity": new_sell[ad_no]["tradeCount"],
+                            "change": new_sell[ad_no]["tradeCount"],
                             "tradeType": new_sell[ad_no]["tradeType"]
                             })
 
@@ -343,7 +343,7 @@ class HtxUser(User):
                             "asset": self.buy_list[ad_no]["coinId"],
                             "currency": self.buy_list[ad_no]["currency"],
                             "price": self.buy_list[ad_no]["price"],
-                            "quantity": self.buy_list[ad_no]["tradeCount"],
+                            "change": self.buy_list[ad_no]["tradeCount"],
                             "tradeType": self.buy_list[ad_no]["tradeType"]
                             })
     
@@ -354,7 +354,7 @@ class HtxUser(User):
                             "asset": self.sell_list[ad_no]["coinId"],
                             "currency": self.sell_list[ad_no]["currency"],
                             "price": self.sell_list[ad_no]["price"],
-                            "quantity": self.sell_list[ad_no]["tradeCount"],
+                            "change": self.sell_list[ad_no]["tradeCount"],
                             "tradeType": self.sell_list[ad_no]["tradeType"]
                             })
     
