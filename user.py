@@ -55,8 +55,8 @@ class BinanceUser(User):
     self.total_sell_count = data["completedSellOrderNum"]
     self.month_buy_count = data["completedBuyOrderNumOfLatest30day"]
     self.month_sell_count = data["completedSellOrderNumOfLatest30day"]
-    self.total_buy_amt_btc = data["completedBuyOrderTotalBtcAmount"]
-    self.total_sell_amt_btc = data["completedSellOrderTotalBtcAmount"]
+    # self.total_buy_amt_btc = data["completedBuyOrderTotalBtcAmount"]
+    # self.total_sell_amt_btc = data["completedSellOrderTotalBtcAmount"]
     self.buy_list = data["buy_list"]
     self.sell_list = data["sell_list"]
   
@@ -71,8 +71,8 @@ class BinanceUser(User):
     self.total_sell_count = data["completedSellOrderNum"]
     self.month_buy_count = data["completedBuyOrderNumOfLatest30day"]
     self.month_sell_count = data["completedSellOrderNumOfLatest30day"]
-    self.total_buy_amt_btc = data["completedBuyOrderTotalBtcAmount"]
-    self.total_sell_amt_btc = data["completedSellOrderTotalBtcAmount"]
+    # self.total_buy_amt_btc = data["completedBuyOrderTotalBtcAmount"]
+    # self.total_sell_amt_btc = data["completedSellOrderTotalBtcAmount"]
     self.buy_list = data["buy_list"]
     self.sell_list = data["sell_list"]
     self._data = data
