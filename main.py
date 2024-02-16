@@ -35,25 +35,42 @@ def main(logger, users, updater):
   
   while True: # always restart after error out
     try:
-      # add watchlist to user list
-      for user_id in watchlist:
-        if user_id not in users:
-          users[user_id] = User(api.get_user(user_id), user_id)
       
       while True:
         print("Starting Cycle...")
+        # go thru watchlist
+        for user_id in watchlist:
+          # get and add new watchlist user data
+          if user_id not in users:
+            users[user_id] = User(api.get_user(user_id), user_id)
+          
+          # check thru watchlist user
+          try:
+            user = users[user_id]
+            new_data = api.get_user(user.id)
+          except:
+            logger.error("ERROR getting %s data! id: %s", user.name, user.id)
+            new_data = user.data
+          print("{: <50}".format(f"Checking {user.name}... "), end='\r')
+          updater.update_user(user, new_data)
+          user.data = new_data
+        
+        # get adlist
         buy_list, sell_list = api.get_ad_list()
         ad_list = [Ads(ad) for ad in buy_list] + [Ads(ad) for ad in sell_list]
         
         # check for new ads and add new advertisers if any
+        latest_ad_users = set()
         for ad in ad_list:
           if ad.user_id not in users:
             user = api.get_user(ad.user_id)
             users[ad.user_id] = User(user, ad.user_id) # add new user to db
             logger.info(f"A new advertiser just joined: {ad.user_name}")
-            
-        for user in users.values():
+          
+          latest_ad_users.add(ad.user_id)
+        for user_id in latest_ad_users:
           try:
+            user = users[user_id]
             new_data = api.get_user(user.id)
           except:
             logger.error("ERROR getting %s data! id: %s", user.name, user.id)
